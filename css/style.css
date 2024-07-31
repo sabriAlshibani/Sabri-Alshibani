@@ -133,6 +133,10 @@ nav .container .menu {
     padding: 10px;
     display: block;
     text-align: center;
+    width: 100%;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
   }
 }
 
