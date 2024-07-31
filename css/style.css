@@ -22,6 +22,7 @@
   --text-color: #111010;
   --describe-color: #1110109f;
   --border-color: #42414180;
+  --hover-color: #3293cf;
 }
 .dark-them {
   --primary-color: #030712;
@@ -29,6 +30,7 @@
   --text-color: #e0e2e4;
   --describe-color: #3293cf;
   --border-color: #9abcd1;
+  --hover-color: #3293cf;
 }
 body {
   background-color: var(--primary-color);
@@ -109,6 +111,12 @@ h2::after {
   color: var(--text-color);
   text-transform: lowercase;
   font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.links a:hover {
+  color:  #3293cf;
 }
 .icon-mode {
   width: 40px;
@@ -212,6 +220,7 @@ header .banner .container {
     18% 1%,
     35% 0%
   );
+  background-color: var(--secondary-color);
 }
 .banner .summary {
   padding: 30px;
