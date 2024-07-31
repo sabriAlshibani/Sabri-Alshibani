@@ -33,6 +33,36 @@
 body {
   background-color: var(--primary-color);
 }
+h2 {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  justify-content: center;
+  position: relative;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: var(--describe-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: var(--describe-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1px;
+}
 /*  start header */
 .header {
   width: 100%;
@@ -131,7 +161,6 @@ nav .container .menu {
   .links-appear a {
     color: var(--text-color);
     padding: 10px;
-    display: block;
     text-align: center;
     width: 100%;
     display: flex;
@@ -215,7 +244,12 @@ header .banner .container {
 .banner .summary h1 {
   color: var(--text-color);
   margin: 20px 0;
-  font-size: 34px;
+  font-size: 50px;
+}
+@media (max-width: 767px) {
+  .banner .summary h1 {
+    font-size: 30px;
+  }
 }
 .banner .summary p {
   color: var(--describe-color);
@@ -226,12 +260,25 @@ header .banner .container {
   font-family: "Exo 2", sans-serif;
 }
 .banner .summary .buttons {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   margin-top: 50px;
+}
+.banner .summary span {
+  display: flex;
+  align-items: center;
+letter-spacing: 2px;
+font-size: 20px;
+color: var(--describe-color);
+
+}
+@media (max-width: 767px) {
+  .banner .summary span {
+    justify-content: center;
+  }
 }
 @media (max-width: 767px) {
   .buttons {
@@ -280,25 +327,12 @@ header .banner .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.skills .container h2 {
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-transform: uppercase;
-  color: var(--text-color);
-  margin-left: 20px;
-}
-@media (max-width: 767px) {
-  .skills .container h2 {
-    justify-content: center;
-  }
-}
 .skills .cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+  margin-top: 40px;
 }
 .cards .card {
   width: 100%;
