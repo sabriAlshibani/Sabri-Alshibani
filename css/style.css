@@ -30,7 +30,7 @@
   --text-color: #e0e2e4;
   --describe-color: #3293cf;
   --border-color: #9abcd1;
-  --hover-color: #3293cf;
+  --hover-color: #282c2c;
 }
 body {
   background-color: var(--primary-color);
@@ -45,6 +45,12 @@ h2 {
   color: var(--text-color);
   justify-content: center;
   position: relative;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+    margin-top: 0;
+  }
 }
 h2::before {
   content: "";
@@ -117,7 +123,7 @@ h2::after {
   align-items: center;
 }
 .links a:hover {
-  color:  #3293cf;
+  color: #3293cf;
 }
 .icon-mode {
   width: 40px;
@@ -173,8 +179,8 @@ nav .container .menu {
     text-align: center;
     width: 100%;
     display: flex;
-  justify-content: space-between;
-  align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -196,11 +202,15 @@ header .banner .container {
   }
   .banner .summary {
     width: 70%;
-    height: 400px;
   }
   .banner .img {
     width: 25%;
     height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  header .banner .container {
+    flex-direction: column;
   }
 }
 .banner .img {
@@ -281,10 +291,9 @@ header .banner .container {
 .banner .summary span {
   display: flex;
   align-items: center;
-letter-spacing: 2px;
-font-size: 20px;
-color: var(--describe-color);
-
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: var(--describe-color);
 }
 @media (max-width: 767px) {
   .banner .summary span {
@@ -370,8 +379,65 @@ color: var(--describe-color);
   font-size: 24px;
 }
 /* end skills */
+
+/* start about */
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  padding: 30px;
+}
 @media (max-width: 767px) {
-  header .banner .container {
-    flex-direction: column;
-  }
+  .about .container {
+  flex-direction: column;
+}
+.about .img {
+  width: 100%;
+  height: 100%;
+}
+.about .about-content {
+  width: 100%;
+}
+} 
+
+.about .img {
+  width: 40%;
+}
+.about .about-content {
+  width: 50%;
+}
+.about .about-content h2 {
+  margin-bottom: 70px;
+}
+.about .about-content p {
+  font-size: 20px;
+  line-height: 2;
+  color: var(--describe-color);
+  width: 100%;
+}
+.about .about-content a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #16CA00;
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 40px;
+
+}
+
+.about .img img {
+  width: 100%;
 }
