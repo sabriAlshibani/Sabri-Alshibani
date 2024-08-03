@@ -267,6 +267,11 @@ header .banner .container {
   font-size: 50px;
   letter-spacing: 2px;
 }
+@media (max-width: 767px) {
+  .banner .summary h1 {
+    font-size: 30px;
+  }
+}
 .banner .summary p {
   color: var(--describe-color);
   font-size: 20px;
